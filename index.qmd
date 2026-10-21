@@ -1,6 +1,6 @@
 ---
-title: "DOE"
-author: "katerin"
+title: "Diseño"
+author: "Katerin"
 format: html
 ---
 
@@ -8,18 +8,19 @@ format: html
 
 ## Base de datos
 
-> https://docs.google.com/spreadsheets/d/15r7ZwcZZHbEgltlF6gSFvCTFA-CFzVBWwg3mFlRyKPs/edit?gid=172957346#gid=172957346
+> https://docs.google.com/spreadsheets/d/1usxzxsS2-eozwwrzBdO6IKGJsyDRpihZunrBrXrCQh4/edit?gid=2080506897#gid=2080506897
 
 ## Identificar los factores
 
-1.Factor 1: genotipo
-1.Factor 2: riego
+1.Factor 1: Boro (B)
+1.Factor 2: Potasio (k)
 
 ## Identificar el modelo
 
 Factorial en DBCA
+$$y = \mu + bloque + B + K + B*k + \xi$$
 
-$$y = \mu + bloque + G + G*I + \xi$$
+
 # Project setup
 
 ```{r}
@@ -31,36 +32,44 @@ source('https://inkaverse.com/setup.r')
 ## Data import
 
 ```{r}
-gs <- "https://docs.google.com/spreadsheets/d/15r7ZwcZZHbEgltlF6gSFvCTFA-CFzVBWwg3mFlRyKPs/edit?gid=172957346#gid=172957346" %>% 
+gs <- "https://docs.google.com/spreadsheets/d/1usxzxsS2-eozwwrzBdO6IKGJsyDRpihZunrBrXrCQh4/edit?gid=2080506897#gid=2080506897" %>% 
   as_sheets_id()
 
 fb <- gs %>% 
   range_read(ss = .,sheet = "fb") %>% 
-  mutate(across(c(1:4), ~ as.factor(.))) 
+  mutate(across(c(trat,bloque,B,K), ~ as.factor(.))) %>%
+
+  group_by(trat, bloque, B, K) %>%
+  summarise(pdf = mean(pdf), .groups = "drop")
 
 fb %>% str()
+
 ```
 # Analisis de varianza
 
 ```{r}
-# aov() ó lm()
-
-md <- aov(formula = lfa ~ block + irrigation + genotype + irrigation * genotype, fb)
+md <- aov(
+  pdf ~ bloque + B * K,
+  data = fb
+)
 
 anova(md)
 ```
+
 # comparación de medias
 
 ```{r}
-mc <- emmeans(md, ~ irrigation * genotype)
+mc <- emmeans(md, ~ B * K)
 
 mc
 
-# letras de significancia
-tab <- cld(mc,
-           adjust = "tukey",
-           Letters = letters,
-           decreasing = T)
+# Letras de significancia de Tukey
+tab <- multcomp::cld(
+  mc,
+  adjust = "tukey",
+  Letters = letters,
+  decreasing = TRUE
+)
 
 tab
 
@@ -69,20 +78,15 @@ tab
 # Representación gráfica
 
 ```{r}
-pl <- plot_smr(data = tab
-               , x = "genotype"
-               , y = "emmean"
-               , group = "irrigation"
-               , error = "SE"
-               , sig = ".group"
-               , ylab = "Area foliar (cm2)"
+pl <- plot_smr(data = tab,
+               x = "B",
+               y = "emmean",
+               group = "K",
+               error = "SE",
+               sig = ".group",
+               ylab = "Peso del fruto"
                )
 
 pl
 
 ```
-
-
-
-
-

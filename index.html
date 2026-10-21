@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="katerin">
+<meta name="author" content="Katerin">
 
-<title>DOE</title>
+<title>Diseño</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -117,7 +117,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">DOE</h1>
+<h1 class="title">Diseño</h1>
 </div>
 
 
@@ -127,7 +127,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>katerin </p>
+             <p>Katerin </p>
           </div>
   </div>
     
@@ -145,17 +145,20 @@ window.Quarto = {
 <section id="base-de-datos" class="level2">
 <h2 class="anchored" data-anchor-id="base-de-datos">Base de datos</h2>
 <blockquote class="blockquote">
-<p>https://docs.google.com/spreadsheets/d/15r7ZwcZZHbEgltlF6gSFvCTFA-CFzVBWwg3mFlRyKPs/edit?gid=172957346#gid=172957346</p>
+<p>https://docs.google.com/spreadsheets/d/1usxzxsS2-eozwwrzBdO6IKGJsyDRpihZunrBrXrCQh4/edit?gid=2080506897#gid=2080506897</p>
 </blockquote>
 </section>
 <section id="identificar-los-factores" class="level2">
 <h2 class="anchored" data-anchor-id="identificar-los-factores">Identificar los factores</h2>
-<p>1.Factor 1: genotipo 1.Factor 2: riego</p>
+<p>1.Factor 1: Boro (B) 1.Factor 2: Potasio (k)</p>
 </section>
 <section id="identificar-el-modelo" class="level2">
 <h2 class="anchored" data-anchor-id="identificar-el-modelo">Identificar el modelo</h2>
-<p>Factorial en DBCA</p>
-<p><span class="math display">\[y = \mu + bloque + G + G*I + \xi\]</span> # Project setup</p>
+<p>Factorial en DBCA <span class="math display">\[y = \mu + bloque + B + K + B*k + \xi\]</span></p>
+</section>
+</section>
+<section id="project-setup" class="level1">
+<h1>Project setup</h1>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">'https://inkaverse.com/setup.r'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
@@ -181,7 +184,7 @@ CPU cores in use:  12
  collate  Spanish_Peru.utf8
  ctype    Spanish_Peru.utf8
  tz       America/Lima
- date     2026-10-20
+ date     2026-10-21
  pandoc   3.10 @ D:/Git_katerin/resources/app/bin/quarto/bin/tools/ (via rmarkdown)
  quarto   1.10.18 @ D:\\GIT_KA~1\\RESOUR~1\\app\\bin\\quarto\\bin\\quarto.exe
 
@@ -200,7 +203,7 @@ CPU cores in use:  12
  cluster         2.1.8.3 2026-07-30 [1] CRAN (R 4.6.1)
  codetools       0.2-20  2024-03-31 [2] CRAN (R 4.6.1)
  cowplot       * 1.2.0   2025-07-07 [1] CRAN (R 4.6.1)
- curl            8.0.0   2026-08-25 [1] CRAN (R 4.6.1)
+ curl            8.1.0   2026-10-14 [1] CRAN (R 4.6.1)
  devtools      * 2.5.2   2026-04-30 [1] CRAN (R 4.6.1)
  digest          0.6.39  2025-11-19 [1] CRAN (R 4.6.1)
  dplyr         * 1.2.1   2026-04-03 [1] CRAN (R 4.6.1)
@@ -209,7 +212,7 @@ CPU cores in use:  12
  emmeans       * 2.0.4   2026-07-15 [1] CRAN (R 4.6.1)
  estimability    2.0.0   2026-06-26 [1] CRAN (R 4.6.1)
  evaluate        1.0.5   2025-08-27 [1] CRAN (R 4.6.1)
- FactoMineR    * 2.17    2026-09-08 [1] CRAN (R 4.6.1)
+ FactoMineR    * 2.18    2026-10-14 [1] CRAN (R 4.6.1)
  farver          2.1.2   2024-05-13 [1] CRAN (R 4.6.1)
  fastmap         1.2.0   2024-05-15 [1] CRAN (R 4.6.1)
  flashClust      1.1-4   2026-03-03 [1] CRAN (R 4.6.1)
@@ -231,7 +234,7 @@ CPU cores in use:  12
  httr            1.4.9   2026-09-01 [1] CRAN (R 4.6.1)
  huito         * 0.2.8   2026-09-30 [1] CRAN (R 4.6.1)
  inti          * 0.7.5   2026-09-30 [1] CRAN (R 4.6.1)
- irlba           2.3.7   2026-01-30 [1] CRAN (R 4.6.1)
+ irlba           2.4.1   2026-10-05 [1] CRAN (R 4.6.1)
  jsonlite        2.0.0   2025-03-27 [1] CRAN (R 4.6.1)
  knitr         * 1.52    2026-09-06 [1] CRAN (R 4.6.1)
  later           1.4.8   2026-03-05 [1] CRAN (R 4.6.1)
@@ -296,7 +299,7 @@ CPU cores in use:  12
  usethis       * 3.2.2   2026-09-10 [1] CRAN (R 4.6.1)
  vctrs           0.7.3   2026-04-11 [1] CRAN (R 4.6.1)
  withr           3.0.3   2026-06-19 [1] CRAN (R 4.6.1)
- xfun            0.61    2026-09-16 [1] CRAN (R 4.6.1)
+ xfun            0.62    2026-10-16 [1] CRAN (R 4.6.1)
  xtable          1.8-8   2026-02-22 [1] CRAN (R 4.6.1)
  yaml            2.3.12  2025-12-10 [1] CRAN (R 4.6.1)
  zoo             1.9-1   2026-09-25 [1] CRAN (R 4.6.1)
@@ -308,46 +311,32 @@ CPU cores in use:  12
 ──────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
 </div>
-</section>
 <section id="data-import" class="level2">
 <h2 class="anchored" data-anchor-id="data-import">Data import</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>gs <span class="ot">&lt;-</span> <span class="st">"https://docs.google.com/spreadsheets/d/15r7ZwcZZHbEgltlF6gSFvCTFA-CFzVBWwg3mFlRyKPs/edit?gid=172957346#gid=172957346"</span> <span class="sc">%&gt;%</span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>gs <span class="ot">&lt;-</span> <span class="st">"https://docs.google.com/spreadsheets/d/1usxzxsS2-eozwwrzBdO6IKGJsyDRpihZunrBrXrCQh4/edit?gid=2080506897#gid=2080506897"</span> <span class="sc">%&gt;%</span> </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_sheets_id</span>()</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>fb <span class="ot">&lt;-</span> gs <span class="sc">%&gt;%</span> </span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">range_read</span>(<span class="at">ss =</span> .,<span class="at">sheet =</span> <span class="st">"fb"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="sc">~</span> <span class="fu">as.factor</span>(.))) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(trat,bloque,B,K), <span class="sc">~</span> <span class="fu">as.factor</span>(.))) <span class="sc">%&gt;%</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(trat, bloque, B, K) <span class="sc">%&gt;%</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">pdf =</span> <span class="fu">mean</span>(pdf), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Auto-refreshing stale OAuth token.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>✔ Reading from "Lozano-Isla et al. - wue potato".</code></pre>
+<pre><code>✔ Reading from "Examen II".</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>✔ Range ''fb''.</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>fb <span class="sc">%&gt;%</span> <span class="fu">str</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>fb <span class="sc">%&gt;%</span> <span class="fu">str</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>tibble [150 × 18] (S3: tbl_df/tbl/data.frame)
- $ irrigation : Factor w/ 2 levels "irrigado","sequia": 2 2 1 2 1 1 1 1 2 2 ...
- $ genotype   : Factor w/ 15 levels "G01","G02","G03",..: 1 2 1 2 3 4 1 5 6 5 ...
- $ block      : Factor w/ 5 levels "1","2","3","4",..: 2 4 3 1 2 5 1 4 2 1 ...
- $ replication: Factor w/ 5 levels "I","II","III",..: 2 4 3 1 2 5 1 4 2 1 ...
- $ spad_29    : num [1:150] 56.3 52.7 49.2 55.5 58.2 43.5 57.4 56.1 61 60.3 ...
- $ spad_83    : num [1:150] 41.1 47.9 41.6 44.2 32.6 37.8 42.5 35.9 57.5 41.8 ...
- $ rwc_84     : num [1:150] 61.5 63.2 67.7 64.9 74.5 ...
- $ op_84      : num [1:150] -2.43 -3.03 -2.5 -2.4 -2.27 ...
- $ leafdw     : num [1:150] 13.28 9.42 18.22 8.84 14.55 ...
- $ stemdw     : num [1:150] 14.87 8.63 24.19 6.58 12.63 ...
- $ rootdw     : num [1:150] 3.83 2.1 3.16 2 1.83 2.83 2.28 3.65 4.04 4.17 ...
- $ tubdw      : num [1:150] 19.8 17.7 38 13.5 51.1 ...
- $ biomdw     : num [1:150] 51.8 37.8 83.6 30.9 80.2 ...
- $ hi         : num [1:150] 0.45 0.43 0.455 0.437 0.638 ...
- $ ttrans     : num [1:150] 4.5 3.54 8.39 2.9 7.37 ...
- $ wue        : num [1:150] 11.51 10.69 9.97 10.65 10.88 ...
- $ twue       : num [1:150] 4.4 4.99 4.53 4.65 6.94 ...
- $ lfa        : num [1:150] 2900 2619 7579 2450 5413 ...</code></pre>
+<pre><code>tibble [22 × 5] (S3: tbl_df/tbl/data.frame)
+ $ trat  : Factor w/ 6 levels "T0","T1","T2",..: 1 1 1 1 2 2 2 2 3 3 ...
+ $ bloque: Factor w/ 4 levels "I","II","III",..: 1 2 3 4 1 2 3 4 1 2 ...
+ $ B     : Factor w/ 3 levels "0","100","150": 1 1 1 1 2 2 2 2 2 2 ...
+ $ K     : Factor w/ 4 levels "0","100","150",..: 1 1 1 1 2 2 2 2 3 3 ...
+ $ pdf   : num [1:22] 2.17 2.02 2.02 1.73 2 ...</code></pre>
 </div>
 </div>
 </section>
@@ -355,21 +344,22 @@ CPU cores in use:  12
 <section id="analisis-de-varianza" class="level1">
 <h1>Analisis de varianza</h1>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># aov() ó lm()</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>md <span class="ot">&lt;-</span> <span class="fu">aov</span>(<span class="at">formula =</span> lfa <span class="sc">~</span> block <span class="sc">+</span> irrigation <span class="sc">+</span> genotype <span class="sc">+</span> irrigation <span class="sc">*</span> genotype, fb)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(md)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>md <span class="ot">&lt;-</span> <span class="fu">aov</span>(</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  pdf <span class="sc">~</span> bloque <span class="sc">+</span> B <span class="sc">*</span> K,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> fb</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(md)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
-Response: lfa
-                     Df    Sum Sq   Mean Sq   F value              Pr(&gt;F)    
-block                 4   3435339    858835    1.5616              0.1892    
-irrigation            1 788556926 788556926 1433.7957 &lt;0.0000000000000002 ***
-genotype             14 261729564  18694969   33.9922 &lt;0.0000000000000002 ***
-irrigation:genotype  14 108147972   7724855   14.0457 &lt;0.0000000000000002 ***
-Residuals           116  63797516    549979                                  
+Response: pdf
+          Df  Sum Sq  Mean Sq F value  Pr(&gt;F)  
+bloque     3 0.47072 0.156907  4.3495 0.02496 *
+B          2 0.18176 0.090882  2.5193 0.11894  
+K          2 0.02845 0.014225  0.3943 0.68193  
+B:K        1 0.20600 0.206005  5.7105 0.03271 *
+Residuals 13 0.46897 0.036075                  
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
@@ -378,92 +368,58 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="comparación-de-medias" class="level1">
 <h1>comparación de medias</h1>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>mc <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(md, <span class="sc">~</span> irrigation <span class="sc">*</span> genotype)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>mc</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>mc <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(md, <span class="sc">~</span> B <span class="sc">*</span> K)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>mc</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> irrigation genotype emmean  SE  df lower.CL upper.CL
- irrigado   G01        7378 332 116   6721.0     8035
- sequia     G01        3040 332 116   2382.7     3696
- irrigado   G02        5780 332 116   5122.7     6436
- sequia     G02        2717 332 116   2060.2     3374
- irrigado   G03        5417 332 116   4759.9     6074
- sequia     G03        2059 332 116   1402.2     2716
- irrigado   G04        9669 332 116   9012.0    10326
- sequia     G04        2979 332 116   2321.8     3636
- irrigado   G05        8879 332 116   8221.9     9536
- sequia     G05        1784 332 116   1126.8     2441
- irrigado   G06        7455 332 116   6798.5     8112
- sequia     G06        3348 332 116   2691.2     4005
- irrigado   G07        1374 332 116    717.3     2031
- sequia     G07         681 332 116     23.8     1338
- irrigado   G08        7287 332 116   6629.9     7944
- sequia     G08        2374 332 116   1716.7     3031
- irrigado   G09       10288 332 116   9630.8    10945
- sequia     G09        3073 332 116   2416.4     3730
- irrigado   G10        5271 332 116   4614.5     5928
- sequia     G10        2925 332 116   2267.8     3582
- irrigado   G11        6855 332 116   6198.0     7512
- sequia     G11        2062 332 116   1405.5     2719
- irrigado   G12        7417 332 116   6760.4     8074
- sequia     G12        2446 332 116   1789.5     3103
- irrigado   G13        8672 332 116   8015.5     9329
- sequia     G13        3126 332 116   2469.2     3783
- irrigado   G14        8384 332 116   7727.2     9041
- sequia     G14        3514 332 116   2857.5     4171
- irrigado   G15        6367 332 116   5710.1     7024
- sequia     G15        1581 332 116    923.6     2237
+<pre><code> B   K   emmean    SE df lower.CL upper.CL
+ 0   0     1.99 0.095 13     1.78     2.19
+ 100 0   nonEst    NA NA       NA       NA
+ 150 0   nonEst    NA NA       NA       NA
+ 0   100 nonEst    NA NA       NA       NA
+ 100 100   2.06 0.095 13     1.85     2.26
+ 150 100   2.01 0.095 13     1.81     2.22
+ 0   150 nonEst    NA NA       NA       NA
+ 100 150   2.25 0.095 13     2.04     2.46
+ 150 150   1.69 0.141 13     1.38     1.99
+ 0   200 nonEst    NA NA       NA       NA
+ 100 200   2.05 0.095 13     1.84     2.26
+ 150 200 nonEst    NA NA       NA       NA
 
-Results are averaged over the levels of: block 
+Results are averaged over the levels of: bloque 
 Confidence level used: 0.95 </code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># letras de significancia</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>tab <span class="ot">&lt;-</span> <span class="fu">cld</span>(mc,</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">adjust =</span> <span class="st">"tukey"</span>,</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">Letters =</span> letters,</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">decreasing =</span> T)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Letras de significancia de Tukey</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>tab <span class="ot">&lt;-</span> multcomp<span class="sc">::</span><span class="fu">cld</span>(</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  mc,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">adjust =</span> <span class="st">"tukey"</span>,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">Letters =</span> letters,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">decreasing =</span> <span class="cn">TRUE</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Note: adjust = "tukey" was changed to "sidak"
 because "tukey" is only appropriate for one set of pairwise comparisons</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>tab</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>tab</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> irrigation genotype emmean  SE  df lower.CL upper.CL .group      
- irrigado   G09       10288 332 116     9223    11353  a          
- irrigado   G04        9669 332 116     8604    10734  ab         
- irrigado   G05        8879 332 116     7814     9944  abc        
- irrigado   G13        8672 332 116     7607     9738  abc        
- irrigado   G14        8384 332 116     7319     9449   bcd       
- irrigado   G06        7455 332 116     6390     8521    cde      
- irrigado   G12        7417 332 116     6352     8482    cde      
- irrigado   G01        7378 332 116     6313     8443    cde      
- irrigado   G08        7287 332 116     6222     8352    cde      
- irrigado   G11        6855 332 116     5790     7920     def     
- irrigado   G15        6367 332 116     5302     7432      ef     
- irrigado   G02        5780 332 116     4714     6845      ef     
- irrigado   G03        5417 332 116     4352     6482       f     
- irrigado   G10        5271 332 116     4206     6336       fg    
- sequia     G14        3514 332 116     2449     4579        gh   
- sequia     G06        3348 332 116     2283     4413         hi  
- sequia     G13        3126 332 116     2061     4191         hij 
- sequia     G09        3073 332 116     2008     4138         hij 
- sequia     G01        3040 332 116     1974     4105         hij 
- sequia     G04        2979 332 116     1914     4044         hij 
- sequia     G10        2925 332 116     1859     3990         hij 
- sequia     G02        2717 332 116     1652     3782         hij 
- sequia     G12        2446 332 116     1381     3512         hijk
- sequia     G08        2374 332 116     1308     3439         hijk
- sequia     G11        2062 332 116      997     3128         hijk
- sequia     G03        2059 332 116      994     3124         hijk
- sequia     G05        1784 332 116      719     2849         hijk
- sequia     G15        1581 332 116      515     2646          ijk
- irrigado   G07        1374 332 116      309     2439           jk
- sequia     G07         681 332 116     -384     1746            k
+<pre><code> B   K   emmean    SE df lower.CL upper.CL .group
+ 150 200 nonEst    NA NA       NA       NA       
+ 0   200 nonEst    NA NA       NA       NA       
+ 0   150 nonEst    NA NA       NA       NA       
+ 0   100 nonEst    NA NA       NA       NA       
+ 150 0   nonEst    NA NA       NA       NA       
+ 100 0   nonEst    NA NA       NA       NA       
+ 100 150   2.25 0.095 13     1.96     2.54  a    
+ 100 100   2.06 0.095 13     1.76     2.35  a    
+ 100 200   2.05 0.095 13     1.76     2.34  a    
+ 150 100   2.01 0.095 13     1.72     2.31  a    
+ 0   0     1.99 0.095 13     1.69     2.28  a    
+ 150 150   1.69 0.141 13     1.25     2.12  a    
 
-Results are averaged over the levels of: block 
+Results are averaged over the levels of: bloque 
 Confidence level used: 0.95 
-Conf-level adjustment: sidak method for 30 estimates 
-P value adjustment: tukey method for comparing a family of 30 estimates 
+Conf-level adjustment: sidak method for 6 estimates 
+P value adjustment: tukey method for comparing a family of 6 estimates 
 significance level used: alpha = 0.05 
 NOTE: If two or more means share the same grouping symbol,
       then we cannot show them to be different.
@@ -474,16 +430,16 @@ NOTE: If two or more means share the same grouping symbol,
 <section id="representación-gráfica" class="level1">
 <h1>Representación gráfica</h1>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>pl <span class="ot">&lt;-</span> <span class="fu">plot_smr</span>(<span class="at">data =</span> tab</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>               , <span class="at">x =</span> <span class="st">"genotype"</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>               , <span class="at">y =</span> <span class="st">"emmean"</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>               , <span class="at">group =</span> <span class="st">"irrigation"</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>               , <span class="at">error =</span> <span class="st">"SE"</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>               , <span class="at">sig =</span> <span class="st">".group"</span></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>               , <span class="at">ylab =</span> <span class="st">"Area foliar (cm2)"</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>               )</span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>pl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>pl <span class="ot">&lt;-</span> <span class="fu">plot_smr</span>(<span class="at">data =</span> tab,</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">x =</span> <span class="st">"B"</span>,</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">y =</span> <span class="st">"emmean"</span>,</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">group =</span> <span class="st">"K"</span>,</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">error =</span> <span class="st">"SE"</span>,</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">sig =</span> <span class="st">".group"</span>,</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>               <span class="at">ylab =</span> <span class="st">"Peso del fruto"</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>               )</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>pl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
